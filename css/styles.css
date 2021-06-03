@@ -1,0 +1,234 @@
+:root{
+  --background: #495567;
+  --bg-color:#333A44;
+  --text-color:#939caa;
+
+  --space-mono: "Space Mono", "Arial", sans-serif;
+  --lexend-deca: "Lexend Deca", "Arial", sans-serif;
+}
+
+/*WEB FONTS RELATED*/
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  src:url("../fonts/space-mono-v6-latin-regular.woff2") format("woff2"), 
+      url("../fonts/space-mono-v6-latin-regular.woff") format("woff");  
+}
+/* space-mono-700 - latin */
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src:url("../fonts/space-mono-v6-latin-700.woff2") format("woff2"), 
+      url("../fonts/space-mono-v6-latin-700.woff") format("woff");  
+}
+
+/* lexend-deca-regular - latin */
+@font-face {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  src:url("../fonts/lexend-deca-v7-latin-regular.woff2") format("woff2"), 
+      url("../fonts/lexend-deca-v7-latin-regular.woff") format("woff");  
+}
+/*GLOBAL STYLES*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: var(--lexend-deca);
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+/* Heading Styles  */
+
+h1,h2,h3,h4{
+  font-family: var(--space-mono);
+  font-style: normal;
+  font-weight: bold;
+  color: var(--background);
+}
+h1{
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+}
+h2{
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+}
+h3{
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1.78571px;
+}
+h4{
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+}
+
+a{
+  text-decoration: none;
+  font-family: var(--space-mono);
+  font-style: normal;
+  font-weight: bold;
+  white-space: nowrap;
+}
+/* Button Styles  */
+
+.button{
+  text-decoration: none;
+  padding: 14px 48px;
+  background-color: #FCB72B;
+  color: #fff;
+  border: 2px solid #FCB72B;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover{
+  background-color: transparent;
+  color: #FCB72B;
+}
+.button:active{
+  opacity: 0.7;
+}
+
+/* CONTAINER  STYLE*/
+.container{
+  max-width: 1160px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*=====================================================================================================
+                                        HEADER
+=====================================================================================================*/
+.site-header{
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+.site-header__container{
+  display: flex;
+  align-items: center;
+}
+
+/* WRAPPER */
+.toggle{
+  width: 20px;
+  height: 16px;
+  background: url("../assets/icons/toggle-on.svg") no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper-icons{
+  margin-right: 60px;
+}
+.wrapper-nav{
+  flex-grow: 1;
+}
+
+.nav-list{
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+}
+.nav-item:not(:last-child){
+  margin-right: 32px;
+}
+
+.nav-link{
+  color: var(--text-color);
+}
+
+.nav-link:hover{
+  color: #FCB72B;
+}
+.nav-link:active{
+  opacity: 0.7;
+}
+/*=====================================================================================================
+                                        MAIN
+=====================================================================================================*/
+
+/*=====================================================================================================
+                                        FOOTER
+=====================================================================================================*/
+
+/*=====================================================================================================
+                                        RESPONSIVE(TABLET)
+=====================================================================================================*/
+@media only screen and (max-width:750px){
+  .toggle{
+    display: block;
+  }
+  .wrapper-icons{
+    flex-basis: 50%;
+  }
+  .wrapper-icons .logo-img{
+    transform: translateX(50%);
+  }
+  .wrapper-nav{
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 64px 32px 25px;
+    background-color: var(--bg-color);
+    top: 75px;
+    left: -100%;
+    width: 75%;
+    height: calc(100% - 75px);
+    transition: left 0.5s ease;
+  }
+  
+  .wrapper-nav-shown{
+    left: 0;
+  }
+  .toggle-off{
+    background: url("../assets/icons/toggle-off.svg") no-repeat center center;
+  }
+  .nav-list{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-item:not(:last-child){
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+  .nav-link{
+    color: #fff;
+  }
+}
+/*=====================================================================================================
+                                        RESPONSIVE(MOBILE)
+=====================================================================================================*/
