@@ -60,6 +60,7 @@ body {
 /* Heading Styles  */
 
 h1,h2,h3,h4{
+  margin-top: 0;
   font-family: var(--space-mono);
   font-style: normal;
   font-weight: bold;
@@ -98,6 +99,7 @@ a{
 .button{
   text-decoration: none;
   padding: 14px 48px;
+  text-transform: capitalize;
   background-color: #FCB72B;
   color: #fff;
   border: 2px solid #FCB72B;
@@ -180,7 +182,35 @@ a{
 /*=====================================================================================================
                                         MAIN
 =====================================================================================================*/
-
+.site-main{
+  width: 1351px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* MAIN HEADER  */
+.main__header{
+  padding: 153px 120px;
+  background:url("../assets/patterns/white-circles.svg") no-repeat calc(100% + 30px) 70%,
+  url("../assets/patterns/right-arrow.svg") no-repeat 70% 70%,
+  url("../assets/patterns/line.svg") no-repeat 0% 54%,  
+  url("../assets/images/home-hero-desktop.jpg") no-repeat;
+}
+.main__header-info{
+  max-width: 500px;
+  color: #fff;
+}
+.main__header-caption{
+  color: #fff;
+  margin-bottom: 40px;
+}
+.main__header-text{
+  max-width: 400px;
+  margin-left: auto;
+}
+.main__header-text p{
+  margin-top: 0;
+  margin-bottom: 40px;
+}
 /*=====================================================================================================
                                         FOOTER
 =====================================================================================================*/
@@ -189,6 +219,8 @@ a{
                                         RESPONSIVE(TABLET)
 =====================================================================================================*/
 @media only screen and (max-width:750px){
+
+  /* HEADER  */
   .toggle{
     display: block;
   }
@@ -200,6 +232,7 @@ a{
   }
   .wrapper-nav{
     position: fixed;
+    z-index: 999;
     flex-direction: column;
     align-items: flex-start;
     padding: 64px 32px 25px;
