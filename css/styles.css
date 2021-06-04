@@ -184,33 +184,109 @@ a{
 =====================================================================================================*/
 .site-main{
   flex-grow: 1;
-  width: 1351px;
-  margin-right: auto;
-  margin-left: auto;
 }
 /* MAIN HEADER  */
 .main__header{
+  position: relative;
   padding: 153px 120px;
-  background:url("../assets/patterns/white-circles.svg") no-repeat calc(100% + 30px) 70%,
-  url("../assets/patterns/right-arrow.svg") no-repeat 70% 70%,
-  url("../assets/patterns/line.svg") no-repeat 0% 54%,  
-  url("../assets/images/home-hero-desktop.jpg") no-repeat;
+  background: url("../assets/images/home-hero-desktop.jpg") no-repeat;
+  background-size: cover;
+}
+.main__header::before{
+  position: absolute;
+  content: "";
+  width: 1100px;
+  height: 150px;
+  top: 53%;
+  left: 0%;
+  background: url("../assets/patterns/right-arrow.svg") no-repeat 100% 0%,
+  url("../assets/patterns/line.svg") no-repeat 0% 0%;
+}
+.main__header::after{
+  position: absolute;
+  content: "";
+  width: 234px;
+  height: 62px;
+  top: 65%;
+  right: 0%;
+  background: url("../assets/patterns/white-circles.svg") no-repeat calc(100% + 30px) center;
+  background-size: contain;
 }
 .main__header-info{
-  max-width: 500px;
-  color: #fff;
+  max-width: 1135px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.main__header-caption{
+.main__header .main__header-caption{
   color: #fff;
+  margin-top: 0;
   margin-bottom: 40px;
 }
 .main__header-text{
+  position: relative;
+  left: 100px;
   max-width: 400px;
-  margin-left: auto;
 }
 .main__header-text p{
+  color: #fff;
   margin-top: 0;
   margin-bottom: 40px;
+}
+ /* advantage  */
+.advantage{
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+.advantage-container{
+  position: relative;
+  display: flex;
+}
+.advantage-container::before{
+  content: "";
+  position: absolute;
+  left: -10rem;
+  top: 40px;
+  z-index: -1;
+  width: 975px;
+  height: 15px;
+  background: url("../assets/patterns/line-gray.svg") repeat-x;
+  background-size: contain;
+}
+.advantage-container__text{
+  max-width: 350px;
+}
+.advantage-container__text::before{
+  content: "";
+  width: 96px;
+  height: 96px;
+  display: block;
+  background-color: #FCB72B;
+  border-radius: 100%;
+  margin-bottom: 40px;
+}
+.advantage-container__text-locate::before{
+  background: url("../assets/icons/locate.svg") no-repeat center center;
+}
+
+.advantage-container__text-scooter::before{
+  background: url("../assets/icons/scooter.svg") no-repeat center center;
+}
+
+.advantage-container__text-ride::before{
+  background: url("../assets/icons/ride.svg") no-repeat center center;
+}
+
+.advantage-container__text:not(:last-child){
+  margin-right: 30px;
+}
+.advantage-container__text h4{
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+.advantage-container__text p{
+  font-family: var(--lexend-deca);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /*=====================================================================================================
                                         FOOTER
@@ -219,9 +295,60 @@ a{
 /*=====================================================================================================
                                         RESPONSIVE(TABLET)
 =====================================================================================================*/
+@media only screen and (max-width:1115px){
+  /* MAIN HEADER  */
+.main__header{
+  position: relative;
+  padding: 140px 100px 220px;
+  background: url("../assets/images/home-hero-tablet.jpg") no-repeat;
+  background-size: cover;
+}
+.main__header::before{
+  position: absolute;
+  content: "";
+  width: 450px;
+  height: 150px;
+  top: 75%;
+  left: 0%;
+  background: url("../assets/patterns/right-arrow.svg") no-repeat 100% 0%;
+}
+.main__header::after{
+  position: absolute;
+  content: "";
+  width: 234px;
+  height: 62px;
+  top: 85%;
+  right: 0%;
+  background: url("../assets/patterns/white-circles.svg") no-repeat calc(100% + 30px) center;
+  background-size: contain;
+}
+.main__header-info{
+  max-width: 1135px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.main__header-text{
+  position: relative;
+  left: 0px;
+  max-width: 575px;
+  margin: 0 auto;
+}
+
+}
 @media only screen and (max-width:750px){
 
   /* HEADER  */
+  .site-header__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 25px;
+    z-index: 9999;
+    background: #fff;
+  }
   .toggle{
     display: block;
   }
@@ -262,6 +389,33 @@ a{
   .nav-link{
     color: #fff;
   }
+
+    /* MAIN HEADER  */
+  .main__header{
+    position: relative;
+    padding: 115px 32px 180px;
+    background: url("../assets/images/home-hero-mobile.jpg") no-repeat;
+    background-size: cover;
+  }
+  .main__header::before{
+    position: absolute;
+    content: "";
+    width: 450px;
+    height: 150px;
+    top: 70%;
+    left: -300px;
+    background: url("../assets/patterns/right-arrow.svg") no-repeat 100% 0%;
+  }
+  .main__header::after{
+    content: "";  
+    background: none;
+  }
+  .main__header-caption{
+    font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.78571px;
+  }
+
 }
 /*=====================================================================================================
                                         RESPONSIVE(MOBILE)
