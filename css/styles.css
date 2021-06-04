@@ -288,10 +288,25 @@ a{
   margin-top: 0;
   margin-bottom: 0;
 }
+
+/* MAIN INFO  */
+
+
 /*=====================================================================================================
                                         FOOTER
 =====================================================================================================*/
+.footer-nav{
+  background-color: var(--bg-color);
+}
+.site-footer__container{
+  display: flex;
+  align-items: center;
+  padding: 32px 25px;
+}
 
+.social-icon:not(:last-child){
+  margin-right: 25px;
+}
 /*=====================================================================================================
                                         RESPONSIVE(TABLET)
 =====================================================================================================*/
@@ -371,16 +386,16 @@ a{
     z-index: 9999;
     background: #fff;
   }
-  .toggle{
+  .site-header .toggle{
     display: block;
   }
-  .wrapper-icons{
+  .site-header .wrapper-icons{
     flex-basis: 50%;
   }
-  .wrapper-icons .logo-img{
+  .site-header .wrapper-icons .logo-img{
     transform: translateX(50%);
   }
-  .wrapper-nav{
+  .site-header .wrapper-nav{
     position: fixed;
     z-index: 999;
     flex-direction: column;
@@ -394,21 +409,21 @@ a{
     transition: left 0.5s ease;
   }
   
-  .wrapper-nav-shown{
+  .site-header .wrapper-nav-shown{
     left: 0;
   }
-  .toggle-off{
+  .site-header .toggle-off{
     background: url("../assets/icons/toggle-off.svg") no-repeat center center;
   }
-  .nav-list{
+  .site-header .nav-list{
     flex-direction: column;
     align-items: flex-start;
   }
-  .nav-item:not(:last-child){
+  .site-header .nav-item:not(:last-child){
     margin-right: 0;
     margin-bottom: 25px;
   }
-  .nav-link{
+  .site-header .nav-link{
     color: #fff;
   }
 
@@ -456,5 +471,30 @@ a{
     float: none;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* FOOTER  */
+
+  .site-footer__container{
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0 80px;
+  }
+  .site-footer__container .wrapper-icons{
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+  .site-footer__container .wrapper-nav{
+    flex-direction: column;
+  }
+  .site-footer__container .nav-list{
+    flex-direction: column;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+  .site-footer__container .nav-item:not(:last-child){
+    margin-right: 0;
+    margin-bottom: 16px;
   }
 }
