@@ -232,7 +232,7 @@ a{
   margin-top: 0;
   margin-bottom: 40px;
 }
- /* advantage  */
+ /* ADVANTAGES  */
 .advantage{
   padding-top: 160px;
   padding-bottom: 100px;
@@ -335,8 +335,30 @@ a{
   max-width: 575px;
   margin: 0 auto;
 }
+ /* MAIN ADVANTAGES  */
+.advantage-container{
+  flex-direction: column;
+}
+.advantage-container::before{
+  left: -25.5rem;
+  top: -50px;
+  transform: rotate(90deg);
+}
+.advantage-container__text{
+  max-width: 750px;
+}
+.advantage-container__text:not(:last-child){
+  margin-right: 0;
+  margin-bottom: 40px;
+}
+.advantage-container__text::before{
+  float: left;
+  margin-right: 80px;
+}
 
 }
+
+
 @media only screen and (max-width:750px){
 
   /* HEADER  */
@@ -420,3 +442,19 @@ a{
 /*=====================================================================================================
                                         RESPONSIVE(MOBILE)
 =====================================================================================================*/
+
+@media only screen and (max-width:650px){
+
+  /* MAIN ADVANTAGE  */
+  .advantage-container::before{
+    background: none;
+  }
+  .advantage-container__text{
+    text-align: center;
+  }
+  .advantage-container__text::before{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
