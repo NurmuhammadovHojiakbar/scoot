@@ -365,7 +365,8 @@ a{
 
 /* OUR VALUES  */
 .our-values{
-  margin-bottom: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .our-values h2{
   margin-top: 0;
@@ -446,6 +447,35 @@ a{
 /*=====================================================================================================
                                         CAREERS
 =====================================================================================================*/
+
+.jobs{
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+.jobs-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 40px;
+  background-color: #f2f5f9;
+  margin-bottom: 24px;
+}
+.jobs-info h4{
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.jobs-info p{
+  margin: 0;
+  font-family: var(--lexend-deca);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #495567;
+}
+.jobs-info a{
+  padding: 14px 65px;
+}
 /*=====================================================================================================
                                         RESPONSIVE(TABLET)
 =====================================================================================================*/
@@ -551,6 +581,11 @@ a{
 
 @media only screen and (max-width:750px){
 
+  /* Global STYLES  */
+  h2{
+    font-size: 32px;
+    line-height: 32px;
+  }
   /* HEADER  */
   .site-header__container{
     position: fixed;
@@ -635,6 +670,15 @@ a{
   }
   .value{
     margin-right: 0;
+  }
+
+  /* CAREERS  */
+  .jobs-info{
+    flex-direction: column;
+  }
+  .jobs-info__text{
+    text-align: center;
+    margin-bottom: 16px;
   }
 }
 /*=====================================================================================================
