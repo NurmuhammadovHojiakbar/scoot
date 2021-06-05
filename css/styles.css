@@ -295,6 +295,22 @@ a{
 /*=====================================================================================================
                                         FOOTER
 =====================================================================================================*/
+.site-footer{
+  background: var(--background);
+}
+.footer-scoot{
+  padding: 100px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-scoot__text{
+  max-width: 415px;
+}
+.footer-scoot h2{
+  color: #fff;
+}
+
 .footer-nav{
   background-color: var(--bg-color);
 }
@@ -310,6 +326,38 @@ a{
 .social-icon:hover{
   filter: grayscale(100%);
 }
+
+/*=====================================================================================================
+                                        ABOUT
+=====================================================================================================*/
+.main-header{
+  position: relative;
+  padding: 72px 0;
+  background: url("../assets/images/about-hero-desktop.jpg") no-repeat;
+  background-size: cover;
+}
+.main-header::after{
+  position: absolute;
+  content: "";
+  width: 234px;
+  height: 62px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0%;
+  background: url("../assets/patterns/white-circles.svg") no-repeat calc(100% + 30px) center;
+  background-size: contain;
+}
+.main-header h1{
+  color: #fff;
+  margin: 0;
+}
+/*=====================================================================================================
+                                        LOCATION
+=====================================================================================================*/
+
+/*=====================================================================================================
+                                        CAREERS
+=====================================================================================================*/
 /*=====================================================================================================
                                         RESPONSIVE(TABLET)
 =====================================================================================================*/
@@ -373,6 +421,12 @@ a{
   float: left;
   margin-right: 80px;
 }
+
+/* ABOUT  */
+  .main-header{
+    background: url("../assets/images/about-hero-tablet.jpg") no-repeat;
+    background-size: cover;
+  }
 
 }
 
@@ -456,6 +510,11 @@ a{
   letter-spacing: -1.78571px;
   }
 
+  /* ABOUT  */
+  .main-header{
+    background: url("../assets/images/about-hero-mobile.jpg") no-repeat;
+    background-size: cover;
+  }
 }
 /*=====================================================================================================
                                         RESPONSIVE(MOBILE)
