@@ -362,6 +362,46 @@ a{
   color: #fff;
   margin: 0;
 }
+
+/* OUR VALUES  */
+.our-values{
+  margin-bottom: 120px;
+}
+.our-values h2{
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.value-container{
+  display: flex;
+}
+.value-img{
+  border-radius: 100%;
+}
+.value{
+  text-align: center;
+  max-width: 360px;
+  margin-right: 30px;
+}
+.value-text{
+  margin-top: -50px;
+}
+.value-number{
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 32px;
+  padding: 34px;
+  border-radius: 100%;
+  background-color: #FCB72B;
+}
+.value-caption{
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+.value p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
 /*=====================================================================================================
                                         LOCATION
 =====================================================================================================*/
@@ -470,12 +510,7 @@ a{
   margin-right: 80px;
 }
 
-/* ABOUT  */
-  .main-header{
-    background: url("../assets/images/about-hero-tablet.jpg") no-repeat;
-    background-size: cover;
-  }
-  /* FOOTER  */
+/* FOOTER  */
 .footer-scoot{
   flex-direction: column;
   text-align: center;
@@ -483,6 +518,18 @@ a{
 .footer-scoot h2{
   margin-bottom: 40px;
 }
+/* ABOUT  */
+  .main-header{
+    background: url("../assets/images/about-hero-tablet.jpg") no-repeat;
+    background-size: cover;
+  }
+  .value-container{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .value{
+    margin-bottom: 40px;
+  }
 
   /* LOcation  */
   .location-question{
@@ -585,6 +632,9 @@ a{
   .main-header{
     background: url("../assets/images/about-hero-mobile.jpg") no-repeat;
     background-size: cover;
+  }
+  .value{
+    margin-right: 0;
   }
 }
 /*=====================================================================================================
