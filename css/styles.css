@@ -296,7 +296,8 @@ a{
                                         FOOTER
 =====================================================================================================*/
 .site-footer{
-  background: var(--background);
+  background: var(--background) url("../assets/patterns/semi-circles.svg") no-repeat;
+  background-position: calc(100% + 200px) calc(100% - 119px);
 }
 .footer-scoot{
   padding: 100px 25px;
@@ -309,8 +310,18 @@ a{
 }
 .footer-scoot h2{
   color: #fff;
+  margin: 0;
 }
-
+.footer-scoot__download{
+  display: flex;
+  align-items: center;
+}
+.download-scoot__link{
+  margin-right: 12px;
+}
+.download-scoot__link img{
+  display: block;
+}
 .footer-nav{
   background-color: var(--bg-color);
 }
@@ -427,6 +438,14 @@ a{
     background: url("../assets/images/about-hero-tablet.jpg") no-repeat;
     background-size: cover;
   }
+  /* FOOTER  */
+.footer-scoot{
+  flex-direction: column;
+  text-align: center;
+}
+.footer-scoot h2{
+  margin-bottom: 40px;
+}
 
 }
 
@@ -522,6 +541,11 @@ a{
 
 @media only screen and (max-width:650px){
 
+  /* MAIN HEADER  */
+  .main-header::after{
+    background: none;
+  }
+
   /* MAIN ADVANTAGE  */
   .advantage-container::before{
     background: none;
@@ -537,6 +561,9 @@ a{
 
   /* FOOTER  */
 
+  .site-footer{
+    background-position: calc(100% + 200px) calc(100% - 433px);
+  }
   .site-footer__container{
     flex-direction: column;
     align-items: center;
@@ -558,5 +585,11 @@ a{
   .site-footer__container .nav-item:not(:last-child){
     margin-right: 0;
     margin-bottom: 16px;
+  }
+  .footer-scoot__download{
+    flex-direction: column;
+  }
+  .download-scoot__link{
+    margin-bottom: 15px;
   }
 }
