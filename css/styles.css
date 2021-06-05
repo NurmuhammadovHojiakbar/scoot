@@ -365,7 +365,44 @@ a{
 /*=====================================================================================================
                                         LOCATION
 =====================================================================================================*/
+.location-img{
+  text-align: center;
+  padding: 120px 25px;
+}
+.location-img img{
+  max-width: 100%;
+}
 
+.map-mobile{
+  display: none;
+}
+.map-mobile img{
+  margin-bottom: 40px;
+}
+.map-mobile h4{
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding: 22px 100px;
+  background: rgba(252, 183, 43, 0.15);
+}
+
+.location-question{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+.location-question h2{
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+.location-question p{
+  max-width: 445px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 100px;
+}
 /*=====================================================================================================
                                         CAREERS
 =====================================================================================================*/
@@ -446,6 +483,21 @@ a{
 .footer-scoot h2{
   margin-bottom: 40px;
 }
+
+  /* LOcation  */
+  .location-question{
+    flex-direction: column;
+    text-align: center;
+  }
+  .location-question h2{
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .location-question p{
+    max-width: 600px;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
 
 }
 
@@ -591,5 +643,13 @@ a{
   }
   .download-scoot__link{
     margin-bottom: 15px;
+  }
+
+  /* Location */
+  .map-desktop{
+    display: none;
+  }
+  .map-mobile{
+    display: block;
   }
 }
