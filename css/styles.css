@@ -290,8 +290,40 @@ a{
 }
 
 /* MAIN INFO  */
-
-
+.main-info{
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.main-info__container{
+  max-width: 1230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 160px;
+}
+.main-info__container-right{
+  margin-left:auto;
+}
+.main-info__container-left{
+  margin-right:auto;
+}
+.main-info__container-text{
+  max-width: 445px;
+}
+.main-info__container-text h2{
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.main-info__container-text p{
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+  .mobile-image{
+    display: none;
+  }
 /*=====================================================================================================
                                         FOOTER
 =====================================================================================================*/
@@ -616,6 +648,34 @@ a{
   margin-right: 80px;
 }
 
+/* MAIN INFO  */
+
+.main-info__container{
+  flex-direction: column-reverse;
+  align-items: unset;
+}
+.main-info__container img{
+  margin-bottom: 60px;
+  width: 80%;
+}
+.main-info__container-right img{
+  margin-left: auto;
+}
+.main-info__container-left img{
+  margin-right: auto;
+}
+.main-info__container-text{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.main-info__container-left{
+  flex-direction: column;
+}
+
+
 /* FOOTER  */
 .footer-scoot{
   flex-direction: column;
@@ -672,6 +732,10 @@ a{
   h2{
     font-size: 32px;
     line-height: 32px;
+  }
+  h4{
+    font-size: 18px;
+    line-height: 24px;
   }
   /* HEADER  */
   .site-header__container{
@@ -750,6 +814,9 @@ a{
   letter-spacing: -1.78571px;
   }
 
+  /* MAIN INFO  */
+  
+
   /* ABOUT  */
   .main-header{
     background: url("../assets/images/about-hero-mobile.jpg") no-repeat;
@@ -777,6 +844,9 @@ a{
   /* MAIN HEADER  */
   .main-header::after{
     background: none;
+  }
+  .main-header h1{
+    text-align: center;
   }
 
   /* MAIN ADVANTAGE  */
@@ -832,5 +902,17 @@ a{
   }
   .map-mobile{
     display: block;
+  }
+
+  /* MAIN INFO   */
+  .desktop-image{
+    display: none;
+  }
+  .mobile-image{
+    display: block;
+  }
+  /* Careers */
+  .jobs-info__text .button{
+    width: 100%;
   }
 }
